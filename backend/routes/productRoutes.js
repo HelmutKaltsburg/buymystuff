@@ -22,12 +22,9 @@ router.get(
   "/:id",
   asyncHandler(async (req, res) => {
     const product = await Product.findById(req.params.id);
-    console.log("Before if");
     if (product) {
-      console.log("Product found");
       res.json(product);
     } else {
-      console.log("Product found");
       res.status(404);
       throw new Error("Product not found");
     }
