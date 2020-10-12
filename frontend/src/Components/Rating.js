@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 // Displays star icons based on the product rating, displays number of reviews
 const Rating = ({ productRating, productReviews, color }) => {
@@ -68,10 +67,11 @@ Rating.defaultProps = {
 };
 
 // Type checks props and determines whether they are required, throws warning
+/*
 Rating.propTypes = {
   productRating: PropTypes.number.isRequired,
   productReviews: PropTypes.number.isRequired,
   color: PropTypes.string,
 };
-
+*/
 export default Rating;
