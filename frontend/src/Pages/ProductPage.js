@@ -16,7 +16,7 @@ import Message from "../Components/Message";
 import Loader from "../Components/Loader";
 
 const ProductPage = ({ history, match }) => {
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
   const dispatch = useDispatch();
 
