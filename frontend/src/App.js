@@ -10,6 +10,7 @@ import ProfilePage from "./Pages/ProfilePage";
 import ShippingPage from "./Pages/ShippingPage";
 import PaymentPage from "./Pages/PaymentPage";
 import PlaceOrderPage from "./Pages/PlaceOrderPage";
+import OrderPage from "./Pages/OrderPage";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
 
@@ -20,6 +21,7 @@ function App() {
       <main className="py-3">
         <Container>
           <Route path="/shipping" component={ShippingPage} />
+          <Route path="/order/:id" component={OrderPage} />
           <Route path="/payment" component={PaymentPage} />
           <Route path="/placeorder" component={PlaceOrderPage} />
           <Route path="/login" component={LoginPage} />
