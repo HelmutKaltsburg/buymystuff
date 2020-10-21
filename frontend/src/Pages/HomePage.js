@@ -6,7 +6,9 @@ import { listProducts } from "../actions/productActions";
 import Message from "../Components/Message";
 import Loader from "../Components/Loader";
 
-const Home = () => {
+const Home = ({ match }) => {
+  const keyword = match.params.keyword;
+
   const dispatch = useDispatch();
 
   // Extract data from state
@@ -15,8 +17,8 @@ const Home = () => {
 
   // Loads data after the page loads
   useEffect(() => {
-    dispatch(listProducts());
-  }, [dispatch]);
+    dispatch(listProducts(keyword));
+  }, [dispatch, keyword]);
 
   return (
     <>
