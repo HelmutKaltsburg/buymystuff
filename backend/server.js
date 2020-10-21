@@ -30,13 +30,13 @@ app.use("/api/users", userRoutes);
 // Order route
 app.use("/api/orders", orderRoutes);
 
+// Upload route
+app.use("/api/upload", uploadRoutes);
+
 // PayPal route
 app.get("/api/config/paypal", (req, res) =>
   res.send(process.env.PAYPAL_CLIENT_ID)
 );
-
-// Upload route
-app.use("api/upload", uploadRoutes);
 
 const __dirname = path.resolve();
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
